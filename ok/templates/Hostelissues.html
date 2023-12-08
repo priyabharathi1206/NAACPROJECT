@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hostel Issues - KGiSL Institute of Technology</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Add your custom styles here */
+    body {
+      background-color: #f8f9fa;
+    }
+    .header {
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 10px 0;
+    }
+    .form-section {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<div class="container-fluid header text-center mx-auto">
+  <h2>KGiSL Institute of Technology</h2>
+  <p class="mb-0">
+    <span class="text-uppercase">welcome:</span> UserName
+  </p>
+  <a href="#" class="btn btn-danger">
+    <i class="fas fa-sign-out-alt"></i> LOGOUT
+  </a>
+</div>
+
+<!-- Navigation Section -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Facilities</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Complaint Form</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Complaint Form Section -->
+<div class="container form-section mx-auto">
+  <h2 class="text-center">Complaint Form</h2>
+  <p class="text-center">______________________________________________________</p>
+  <p class="text-center">Dear Valued Guest,</p>
+  <p class="text-center">Please, if you are not satisfied with the service, do not hesitate to express your view by filling out this form.</p>
+
+  <!-- Form -->
+  <form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstName">Name *</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" required>
+        </div>
+        <!-- Add similar input fields for other names -->
+    </div>
+  
+    <!-- Email and Phone Input Fields -->
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="email">Email *</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="phone">Phone *</label>
+        <input type="tel" class="form-control" id="phone" name="phone" required>
+      </div>
+    </div>
+  
+    <!-- Room and Cot Input Fields -->
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="room">Room# *</label>
+        <input type="text" class="form-control" id="room" name="room" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="cot">Cot# *</label>
+        <input type="text" class="form-control" id="cot" name="cot" required>
+      </div>
+    </div>
+  
+    <!-- Nature of Complaint Input Field -->
+    <div class="form-group">
+      <label for="complaintNature">Nature of Complaint *</label>
+      <textarea class="form-control" id="complaintNature" name="complaintNature" rows="4" required></textarea>
+    </div>
+  
+    <!-- Quality of Food Input Field -->
+    <div class="form-group">
+      <label for="qualityOfFood">Quality of Food</label>
+      <input type="range" class="form-control-range" id="qualityOfFood" name="qualityOfFood" min="1" max="5" step="1">
+    </div>
+  
+    <!-- Details of Complaint Input Field -->
+    <div class="form-group">
+      <label for="detailsOfComplaint">Details of Complaint (Brief Description) *</label>
+      <textarea class="form-control" id="detailsOfComplaint" name="detailsOfComplaint" rows="6" required></textarea>
+    </div>
+  
+    <!-- Proof Attachment Input Field -->
+    <div class="form-group">
+      <label for="fileUpload">Proof Attachment</label>
+      <input type="file" class="form-control-file" id="fileUpload" name="fileUpload">
+    </div>
+  
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> <a href ="{{url_for('success')}}">SUBMIT</a></button>
+  </form>
+</div>
+
+<!-- Bootstrap and Font Awesome JS scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/3b74a717d5.js"></script>
+
+</body>
+</html>

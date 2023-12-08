@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4caf50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-check-label {
+            color: #495057;
+        }
+
+        .neon-button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .neon-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #28a745, #218838, #28a745);
+            border-radius: 4px;
+            z-index: -1;
+            animation: neon-animation 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes neon-animation {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.7;
+            }
+        }
+    </style>
+    <title>KITE WiFi Issue Form</title>
+</head>
+<body>
+    <div class="container">
+        <form class="mt-4">
+            <h2><i class="fas fa-wifi"></i> KITE WiFi Issue Form</h2>
+
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="macAddress"><i class="fas fa-laptop"></i> MAC Address:</label>
+                <input type="text" class="form-control" id="macAddress" name="macAddress" required>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-exclamation-triangle"></i> Show Issues:</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="slowConnection" name="slowConnection">
+                    <label class="form-check-label" for="slowConnection">Slow Connection</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="noConnection" name="noConnection">
+                    <label class="form-check-label" for="noConnection">No Connection</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="otherIssues"><i class="fas fa-comments"></i> Other Issues:</label>
+                <textarea class="form-control" id="otherIssues" name="otherIssues" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="status"><i class="fas fa-info-circle"></i> Status:</label>
+                <select class="form-control" id="status" name="status">
+                    <option value="morePreference">More Preference</option>
+                    <option value="inProgress">In Progress</option>
+                    <option value="resolved">Resolved</option>
+                </select>
+            </div>
+
+            <div class="form-group text-center">
+                <button type="submit" class="neon-button"><i class="fas fa-paper-plane"></i> <a href="{{url_for('success')}}">Submit</a></button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+</body>
+</html>

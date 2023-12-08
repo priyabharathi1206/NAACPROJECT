@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="x-icon" href="{{url_for('static',filename='img/successimage.png')}}">
+    <style>
+        body {
+          overflow: hidden;
+            font-family: Poppins;
+            min-height: 100vh;
+            background: #80CAF3;
+        }
+
+        #success {
+            position: fixed;
+            top: 20%;
+            left: 10%;
+        }
+
+        .popup-content {
+            margin-left: 27rem;
+            width: 326px;
+            height: 408px;
+            background: white;
+            box-shadow: 4px 4px 70px 10px rgb(0 0 0/11%);
+            border-radius: 25px;
+        }
+
+        .imgbox {
+            text-align: center;
+        }
+
+        .img {
+            width: 112px;
+            margin-top: 40px;
+        }
+
+        .title {
+            font-weight: 500;
+            font-size: 24px;
+            letter-spacing: 0.05em;
+            text-align: center;
+            margin: auto;
+        }
+
+        #success .title {
+            color: #32ba7c;
+        }
+
+        .para {
+            font-weight: 500;
+            width: 80%;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.05em;
+            text-align: center;
+            margin: auto;
+        }
+
+        .button {
+            width: 50%;
+            display: block;
+            margin: 20px auto;
+            border-radius: 25px;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            letter-spacing: 0.05em;
+            background: #32ba7c;
+        }
+    </style>
+    <title>Success</title>
+    
+</head>
+<body>
+<div class="popup" id="success">
+    <div class="popup-content">
+        <div class="imgbox">
+            <img src="{{url_for('static',filename='img/successimage.png')}}" alt="" class="img">
+        </div>
+        <div class="title">
+            <h3>Success!</h3>
+        </div>
+        <p class="para">Your complaint has been submitted successfully</p>
+        <form action="">
+            <a href="{{url_for('index')}}" class="button" id="s_button">OKAY</a>
+        </form>
+    </div>
+</div>
+</body>
+</html>
