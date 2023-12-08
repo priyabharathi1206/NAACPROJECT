@@ -84,7 +84,7 @@ def admin():
 
 @app.route('/cleanliness',methods = ['GET','POST'])
 def cleanliness():
-    if(request.methods == 'POST'):
+    if(request.method == 'POST'):
         issuename = request.form['issuename']
         date = request.form['date']
         proof = request.files['image']
@@ -101,7 +101,7 @@ def cleanliness():
 
 @app.route('/canteen',methods = ['GET','POST'])
 def canteen():
-   if(request.methods == 'POST'):
+   if(request.method == 'POST'):
       complaint = request.form["complaint"]
       date = request.form["date"]
       proof = request.files["image"]
@@ -119,7 +119,7 @@ def canteen():
 
 @app.route('/Hostelissues',methods = ['GET','POST'])
 def Hostelissues():
-   if(request.methods == 'POST'):
+   if(request.method == 'POST'):
       firstname = request.form['firstname']
       email = request.form['email']
       phone = request.form['phone']
@@ -141,7 +141,7 @@ def Hostelissues():
 
 @app.route('/restroom',methods = ['GET','POST'])
 def restroom():
-   if(request.methods == "POST"):
+   if(request.method == "POST"):
       complaint = request.form["complaint"]
       date = request.form["date"]
       proof = request.files["image"]
@@ -158,7 +158,7 @@ def restroom():
 
 @app.route('/Transportissues',methods = ['GET','POST'])
 def Transportissues():
-   if(request.methods == "POST"):
+   if(request.method == "POST"):
         issuename = request.form["issuename"]
         date = request.form["date"]
         proof = request.files["image"]
@@ -177,7 +177,7 @@ def Transportissues():
 
 @app.route('/wifiissues',methods = ['GET','POST'])
 def wifiissues():
-   if(request.methods == "POST"):
+   if(request.method == "POST"):
       name = request.form["name"]
       email = request.form["email"]
       macaddress = request.form["macaddress"]
@@ -191,7 +191,7 @@ def wifiissues():
 
 @app.route('/infra',methods = ['GET','POST'])
 def infra():
-   if(request.methods=="POST"):
+   if(request.method=="POST"):
       complaint = request.form["complaint"]
       date = request.form["date"]
       proof = request.files["image"]
@@ -208,7 +208,7 @@ def infra():
    return render_template('infra.html')
 
 @app.route('/success',methods = ['GET','POST'])
-def success_msg_hostel():
+def success():
     return render_template('success.html')
    
 
